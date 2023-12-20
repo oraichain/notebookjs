@@ -1,6 +1,6 @@
 {
   "name": "@oraichain/notebookjs",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "Parse and render Jupyter/IPython notebooks.",
   "main": "notebook.js",
   "files": [
@@ -20,12 +20,8 @@
     "ansi_up": "^6.0.2",
     "codemirror": "^6.0.1",
     "dompurify": "^3.0.5",
-    "dotenv": "^16.0.3",
     "highlight.js": "^11.8.0",
     "markdown-it": "^13.0.2",
-    "notebookjs": "^0.6.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "table": "^6.8.1"
   },
   "repository": {
