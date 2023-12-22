@@ -106,7 +106,7 @@ document.body.appendChild(frameEl);
 nb.sandboxFrame = frameEl.contentWindow;
 nb.sandboxFrame.depedencies = {};
 console.log = nb.sandboxFrame.console.log = function (...value) {
-  logs.push(...value);
+  logs.push(...value.map(json));
 };
 
 console.table = nb.sandboxFrame.console.table = function (data) {
@@ -174,7 +174,7 @@ nb.Input.prototype.render = function () {
     const start = performance.now();
     try {
       const result = await (1, nb.sandboxFrame.eval)(`(async () => {\n${code}\n})()`);
-      const logStr = logs.map((log) => '<span style="width:100%;display:inline-block">' + json(log) + '</span>').join('');
+      const logStr = logs.map((log) => '<span style="width:100%;display:inline-block">' + log + '</span>').join('');
       stdoutEl.className = 'nb-stdout';
       stdoutEl.innerHTML = logStr;
       if (result !== undefined) {
