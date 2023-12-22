@@ -1,6 +1,6 @@
 {
   "name": "@oraichain/notebookjs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Parse and render Jupyter/IPython notebooks.",
   "main": "notebook.js",
   "files": [
